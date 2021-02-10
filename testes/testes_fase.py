@@ -111,7 +111,7 @@ class FaseTestes(TestCase):
         fase.adicionar_porco(*porcos)
         fase.adicionar_passaro(*passaros)
 
-        self.assertEqual(EM_ANDAMENTO, fase.status())
+        self.assertEqual(EM_ANDAMENTO,  fase.status())
 
         for ator in porcos + passaros:
             ator.status = DESTRUIDO
@@ -119,7 +119,7 @@ class FaseTestes(TestCase):
 
         fase.adicionar_obstaculo(Obstaculo())
         self.assertEqual(VITORIA, fase.status(),
-                         'Obstáculo não interfere no fim do jogo')
+                         'Obstáculo não interfe re no fim do jogo')
 
         fase.adicionar_porco(PorcoFake())
         self.assertEqual(DERROTA, fase.status(),
